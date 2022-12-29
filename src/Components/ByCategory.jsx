@@ -29,7 +29,7 @@ const CategoryList = () => {
       axios.get(`http://localhost:8080/products/getCategories`)
       .then(res => 
         {
-        console.log(res.data)   
+        // console.log(res.data)   
         setCategoryList(res.data);}
     )}
     ,[])
@@ -39,7 +39,7 @@ const CategoryList = () => {
     axios.get(`http://localhost:8080/products/getCategories`)
     .then(res => 
       {
-      console.log(res.data)   
+      // console.log(res.data)   
       setCategoryList(res.data);}
   )}
   ,[])
@@ -48,7 +48,7 @@ const CategoryList = () => {
     axios.get(`http://localhost:8080/products/allProducts`)
     .then(res => 
       {
-      console.log(res.data)   
+      // console.log(res.data)   
       setData(res.data);
     setProductList(res.data)}
 

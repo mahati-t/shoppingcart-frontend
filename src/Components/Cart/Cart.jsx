@@ -58,7 +58,8 @@ useEffect (()=>{
   if(uid!= null){
     axios.get(`http://localhost:8080/cart/${uid}/getCart`)
     .then(res => 
-      {console.log(res.data.cartItemList)
+      {
+        // console.log(res.data.cartItemList)
         setCartItems(res.data.cartItemList) })
   }
   else{
@@ -72,7 +73,8 @@ useEffect (()=>{
   if(uid!= null){
     axios.get(`http://localhost:8080/cart/${uid}/getCart`)
     .then(res => 
-      {console.log(res.data.cartItemList)
+      {
+        // console.log(res.data.cartItemList)
         setCartItems(res.data.cartItemList) })
   }}
       ,[deleted])
@@ -106,7 +108,7 @@ const array = cartItems.map((cartItem,index)=>{
                           onClick={()=>{
                             axios.get(`http://localhost:8080/cart/${uid}/decreaseQuantity/${cartItem.product.productId}`)
                             .then(response =>{
-                              console.log(response.data);
+                              // console.log(response.data);
                               setQuantity(response.data.quantity);
                               window.location.reload();
                             })

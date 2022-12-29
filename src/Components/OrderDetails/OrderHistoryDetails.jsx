@@ -25,7 +25,7 @@ const OrderHistoryDetails = () => {
         else{
             axios.get(`http://localhost:8080/order/${uid}/getOrders`)
           .then(response =>{
-              console.log(response.data)
+            //   console.log(response.data)
               setOrderList(response.data);              
           }) 
         }           

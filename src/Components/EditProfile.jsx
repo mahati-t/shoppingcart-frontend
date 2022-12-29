@@ -41,7 +41,8 @@ const EditProfile =() =>{
       setUser({...user, userID : uid})
       axios.get(`http://localhost:8080/getprofile/${uid}`)
       .then(res => 
-        {console.log(res.data)   
+        {
+          // console.log(res.data)   
         setUser(res.data)}   
      )
      .catch(error => {
@@ -54,7 +55,7 @@ const EditProfile =() =>{
   const updateProfile =() =>{
     axios.post(`http://localhost:8080/updateprofile`,user)
     .then(response =>{
-      console.log(response);
+      // console.log(response);
     })
     .catch(error => 
       console.log(error));

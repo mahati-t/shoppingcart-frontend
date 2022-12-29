@@ -45,7 +45,7 @@ const LoginPage = () => {
     })
     .then((response)=>{
       if(response != null){
-        console.log(response.data)
+        // console.log(response.data)
         setResult(response.data);
         localStorage.setItem('userId',(response.data.userID))
         navigate('/products');

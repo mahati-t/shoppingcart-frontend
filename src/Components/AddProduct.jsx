@@ -19,7 +19,7 @@ const AddProduct = () => {
     const addingProduct = () => {     
         axios.post("http://localhost:8080/products/addproduct",productDetails)
         .then(response => {
-            console.log(response.data)
+            // console.log(response.data)
             console.log(productDetails)
         })
         .catch(error => {
